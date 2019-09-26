@@ -21,7 +21,7 @@ for hyperlinks in events:
 	#print(event_hyperlinks.get('href'))
 eventArray_length = len(hyperlink_array)
 #change i to 0 before upload.
-i=10
+i=0
 while i < eventArray_length:
 	if eventArray_length >= i:
 		hyperLink_val = hyperlink_array[i]
