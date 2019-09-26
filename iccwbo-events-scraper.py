@@ -89,12 +89,14 @@ while i < eventArray_length:
 					"Event_RegURL": reg_url, 
 					"Contact Email": email_id, 
 					"Contact Tele":telephone_no, 
-					"LogisticalInfo":venueAddress}
+					"LogisticalInfo":venueAddress
+					}
 
 		
 		#Must call Python Wordpress Auth function here
 		# Log into Wordpress, associate the JSON Dict to 
 		# Python Array and publish post.
+
 
 
 
