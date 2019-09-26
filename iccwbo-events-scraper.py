@@ -36,7 +36,7 @@ while i < eventArray_length:
 		event_title = event_soupy.find('div', attrs={'class':'description'}).h2.text
 		event_date_unstripped = event_soupy.find('div', attrs={'class':'signup_button'}).p.text 
 		
-		#	Converted Day, Date, Month, Year to a ListThis works!
+		#	Converted Day, Date, Month, Year to a List.This works!
 		#	Deleted the first item in that list
 		# 	Used monthYear array to simplify the code below.
 		#	Compares the MONTH with the Month in the array
@@ -80,8 +80,7 @@ while i < eventArray_length:
 		venueAddress = event_soupy.find('address').text
 		venueAddress = venueAddress.strip()
 
-		#print(venueAddress)
-
+		#Set the event data to a Json Dict. 
 		eventData = {
 					"Event Title": event_title,
 					"Organiser Logo": organiserlogo,
@@ -91,6 +90,14 @@ while i < eventArray_length:
 					"Contact Email": email_id, 
 					"Contact Tele":telephone_no, 
 					"LogisticalInfo":venueAddress}
+
+		
+		#Must call Python Wordpress Auth function here
+		# Log into Wordpress, associate the JSON Dict to 
+		# Python Array and publish post.
+
+
+
 		#Export to Json File
 		with open('event_info','w') as fp:
 			json.dump(eventData, fp)
